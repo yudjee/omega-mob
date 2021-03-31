@@ -7,49 +7,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header class="header header_search">
-        <a class="menu-block" href="main.html">
-            <img class="icon" src="img/back-arrow.png" alt="back">
+    <div class="menu-line menu-line_top">
+        <a class="menu-line__button" href="main.html">
+            <svg class="icon icon-back"><use xlink:href="icons/icons.svg#icon-back"></use></svg>
         </a>
         <div class="input-row">
             <input type="text" />
-            <img src="img/close-icon.png" alt="reset" class="reset">
+            <svg class="icon icon-close icon_gray input-row__reset">
+                <use xlink:href="icons/icons.svg#icon-close"></use>
+            </svg>
         </div>
-        <a class="menu-block" href="search-history.html">
-            <img src="img/search-history-icon.png" alt="history">
+        <a class="menu-line__button" href="search-history.html">
+            <svg class="icon icon-history"><use xlink:href="icons/icons.svg#icon-history"></use></svg>
         </a>
-    </header>
+    </div>
     <div class="search-list">
-        <a class="search-list_item with-label">
-            <div class="title">КХ <b>7777</b> ЕВ</div>
-            <div class="desciprion">
+        <div class="search-list__item search-list__item_label">
+            <a class="title" href="#">КХ <b>7777</b> ЕВ</a>
+            <div class="search-list__desciprion">
                 <span>VIN: jm3er29l280176104</span>
                 <span>Mazda CX-7 2020</span>
             </div>
             <div class="label">Гараж</div>
-        </a>
+        </div>
 
-        <div class="search-list_item">
-            <div class="title">Петров Сергей Андреевич ООО</div>
-            <div class="desciprion">
+        <div class="search-list__item">
+            <a class="title" href="#">Петров Сергей Андреевич ООО</a>
+            <div class="search-list__desciprion">
                 <span>789298398439</span>
                 <span>Owner, STO, AutoDoc</span>
             </div>
         </div>
-        <div class="search-list_item detail">
+        <div class="search-list__item search-list__item_detail">
             <div class="detail-container">
                 <img src="img/detail.jpg" alt="detail">
-                <div class="detail-container_info">
-                    <div class="title">Mahle/Knecht OC-7777OF</div>
+                <div class="detail-container__info">
+                    <a class="title" href="#">Mahle/Knecht OC-7777OF</a>
                     <span class="bold">Фильтр масляный</span>
                 </div>
             </div>
             <div class="specification">
-                <table class="specification-table">
+                <table class="specification__table">
                     <tr>
                         <th>ДН</th>
                         <th>ХА</th>
@@ -66,9 +68,9 @@
                     </tr>
                 </table>
                 <div class="specification-cost">
-                    <span>&#62;3шт. <span class="price bold">12 730</span> грн.</span>
-                    <span>&#60;3шт. <span class="price">17 730</span> грн.</span>
-                    <button class="button button-small">Купить</button>
+                    <span>&#62;3шт. <span class="bold">12 730</span> грн.</span>
+                    <span>&#60;3шт. <span>17 730</span> грн.</span>
+                    <button class="button button_small">Купить</button>
                 </div>
             </div>
         </div>
@@ -79,12 +81,12 @@
             <div class="detail-container">
                 <img src="img/detail.jpg" alt="detail">
                 <div class="detail-container_info">
-                    <div class="title">Mahle/Knecht OC-7777OF</div>
+                    <a class="title" href="#">Mahle/Knecht OC-7777OF</a>
                     <span class="bold">Фильтр масляный</span>
                 </div>
             </div>
             <div class="specification">
-                <table class="specification-table">
+                <table class="specification__table">
                     <tr>
                         <th>ДН</th>
                         <th>ХА</th>
@@ -101,19 +103,25 @@
                     </tr>
                 </table>
                 <div class="specification-cost">
-                    <span>&#62;3шт. <span class="price bold">12 730</span> грн.</span>
-                    <span>&#60;3шт. <span class="price">17 730</span> грн.</span>
-                    <button class="button button-small">Купить</button>
+                    <span>&#62;3шт. <span class="bold">12 730</span> грн.</span>
+                    <span>&#60;3шт. <span>17 730</span> грн.</span>
+                    <button class="button button_small">Купить</button>
                 </div>
             </div>
         </div>
     </div>
-    <button class="button button-outlined search">Искать везде</button>
-    <footer class="footer">
-        <a href="#"><img src="img/car-icon.png" /></a>
-        <a href="#"><img src="img/camera-icon.png" /></a>
-        <a href="search-history.html"><img src="img/search-history-icon.png" /></a>
-    </footer>
+    <button class="button button_outlined button_search">Искать везде</button>
+    <div class="menu-line menu-line_bottom">
+        <a class="menu-line__button" href="#">
+            <svg class="icon icon-car"><use xlink:href="icons/icons.svg#icon-car"></use></svg>
+        </a>
+        <a class="menu-line__button" href="#">
+            <svg class="icon icon-camera"><use xlink:href="icons/icons.svg#icon-camera"></use></svg>
+        </a>
+        <a class="menu-line__button" href="search-history.html">
+            <svg class="icon icon-history"><use xlink:href="icons/icons.svg#icon-history"></use></svg>
+        </a>
+    </div>
 </body>
 
 </html>

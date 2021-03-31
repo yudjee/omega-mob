@@ -7,53 +7,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <div class="accounts-list">
-        <a class="accounts-list_item" href="#">
-            <div class="list-item_description">
-                <div class="title">Пупкин Иван Иванович ФОП</div>
+        <a class="accounts-list__item" href="#">
+            <div class="accounts-list__description">
+                <div class="title title_small">Пупкин Иван Иванович ФОП</div>
                 <div class="text">7787878787 mail@gmail.com (owner)</div>
             </div>
-            <div class="arrow">
-                <img src="img/bottom-arrow.png" alt="arrow" />
-            </div>
+            <svg class="icon icon-arrow-bottom accounts-list__arrow">
+                <use xlink:href="icons/icons.svg#icon-arrow-bottom"></use>
+            </svg>
         </a>
     </div>
-    <div class="footer footer-menu">
-        <div class="menu-toggle menu-block">
-            <div class="menu-toggle_open">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+    <div class="menu-line menu-line_bottom menu-line_main">
+        <div class="js-toggle-menu">
+            <div class="menu-line__button menu-line__button_open">
+                <svg class="icon icon-burger">
+                    <use xlink:href="icons/icons.svg#icon-burger"></use>
+                </svg>
             </div>
-            <div class="menu-toggle_close button-close menu-block menu-block_gray"></div>
+            <div class="menu-line__button menu-line__button_gray menu-line__button_close">
+                <svg class="icon icon-close icon_white">
+                    <use xlink:href="icons/icons.svg#icon-close"></use>
+                </svg>
+            </div>
         </div>
         <img src="img/omega_logo_1.png" alt="omega logo" />
-        <a class="menu-search menu-block" href="search.html">
-            <img src="img/search-icon.png" alt="search" />
+        <a class="menu-line__button menu-line__button_search" href="search.html">
+            <svg class="icon icon-search">
+                <use xlink:href="icons/icons.svg#icon-search"></use>
+            </svg>
         </a>
-        <div class="language menu-block menu-block_gray">
+        <div class="menu-line__button menu-line__button_gray menu-line__button_language">
             Ru
         </div>
     </div>
     <ul class="menu-wrapper">
-        <li><a href="#">Настройки</a></li>
-        <li><a href="#">Деб. задолженность</a></li>
-        <li><a href="#">Взаиморасчеты</a></li>
-        <li><a href="#">Расходные накладные</a></li>
-        <li><a href="#">Гараж</a></li>
-        <li><a href="#">Контакты</a></li>
-        <li><a href="#">Звонок менеджеру</a></li>
+        <li class="menu-wrapper__item"><a href="#">Настройки</a></li>
+        <li class="menu-wrapper__item"><a href="#">Деб. задолженность</a></li>
+        <li class="menu-wrapper__item"><a href="#">Взаиморасчеты</a></li>
+        <li class="menu-wrapper__item"><a href="#">Расходные накладные</a></li>
+        <li class="menu-wrapper__item"><a href="#">Гараж</a></li>
+        <li class="menu-wrapper__item"><a href="#">Контакты</a></li>
+        <li class="menu-wrapper__item"><a href="#">Звонок менеджеру</a></li>
     </ul>
 </body>
 <script>
-    const footerWrapper = document.querySelector('.footer-menu');
+    const footerWrapper = document.querySelector('.menu-line_main');
     const menuWrapper = document.querySelector('.menu-wrapper');
-    const menuBtn = document.querySelector('.menu-toggle');
+    const menuBtn = document.querySelector('.js-toggle-menu');
     menuBtn.addEventListener('click', () => {
         footerWrapper.classList.toggle('active')
         menuWrapper.classList.toggle('active')
